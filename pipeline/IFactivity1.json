@@ -1,0 +1,65 @@
+{
+	"name": "IFactivity1",
+	"properties": {
+		"description": "if activity practice",
+		"activities": [
+			{
+				"name": "If Condition1",
+				"type": "IfCondition",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@equals(variables('loadTyp'),variables('loadType'))",
+						"type": "Expression"
+					},
+					"ifFalseActivities": [
+						{
+							"name": "Set variable2",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "loadType",
+								"value": "False"
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "loadType",
+								"value": "True"
+							}
+						}
+					]
+				}
+			}
+		],
+		"variables": {
+			"loadType": {
+				"type": "String",
+				"defaultValue": "[\"full\"]"
+			},
+			"loadTyp": {
+				"type": "String",
+				"defaultValue": "[\"incremental\"]"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-05-31T11:17:26Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

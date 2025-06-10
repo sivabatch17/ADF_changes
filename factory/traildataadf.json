@@ -1,0 +1,17 @@
+{
+	"name": "traildataadf",
+	"properties": {
+		"globalParameters": {
+			"Globalwait": {
+				"type": "int",
+				"value": 5
+			}
+		}
+	},
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "498a9025-974a-44d3-b37d-5135d5202c33",
+		"tenantId": "3d216f45-c930-49db-bdb0-bfbacfdc4b77"
+	}
+}

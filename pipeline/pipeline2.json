@@ -1,0 +1,30 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"activities": [
+			{
+				"name": "pipeline2",
+				"description": "calling pipeline to wait 3seconds",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pipeline1",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": false,
+					"parameters": {
+						"waittimeparameter": 1
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-05-26T09:42:18Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
